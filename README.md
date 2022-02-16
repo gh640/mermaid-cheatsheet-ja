@@ -17,7 +17,7 @@ GitHub の Markdown のコードブロックで Mermaid シンタックスが使
 - [Git グラフ（試験的）](#git-グラフ試験的)
 - [ユーザージャーニー図](#ユーザージャーニー図)
 
-## フローチャート
+### フローチャート
 
 ```
 flowchart LR
@@ -35,7 +35,7 @@ C -->|1| D[結果 1]
 C -->|2| E[結果 2]
 ```
 
-## シーケンス図
+### シーケンス図
 
 ```
 sequenceDiagram
@@ -61,7 +61,7 @@ Note right of ジョン: 合理的な思考
 ボブ-->>ジョン: ばっちりよ！
 ```
 
-## ガントチャート
+### ガントチャート
 
 ```
 gantt
@@ -85,7 +85,7 @@ gantt
     並行 4   :         des6, after des4, 1d
 ```
 
-## クラス図
+### クラス図
 
 ```
 classDiagram
@@ -125,7 +125,7 @@ class クラス10 {
 }
 ```
 
-## 状態図
+### 状態図
 
 ```
 stateDiagram-v2
@@ -147,7 +147,7 @@ stateDiagram-v2
 衝突 --> [*]
 ```
 
-### パイチャート（円グラフ）
+#### パイチャート（円グラフ）
 
 ```
 pie
@@ -163,7 +163,7 @@ pie
 "ネズミ" : 15
 ```
 
-## Git グラフ（試験的）
+### Git グラフ（試験的）
 
 ```
 gitGraph:
@@ -203,7 +203,7 @@ commit
 merge newbranch
 ```
 
-## ユーザージャーニー図
+### ユーザージャーニー図
 
 ```
   journey
@@ -228,6 +228,109 @@ merge newbranch
       下の階におりる: 5: 私
       座る: 3: 私
 ```
+
+## REAMDE にサンプルの無いもの
+
+- [ER 図（試験的）](#er-図試験的)
+- [要件図](#要件図)
+
+### ER 図
+
+```
+erDiagram
+    顧客 ||--o{ 注文 : 行う
+    注文 ||--|{ ラインアイテム : 含む
+    顧客 }|..|{ 届け先住所 : 使う
+```
+
+```mermaid
+erDiagram
+    顧客 ||--o{ 注文 : 行う
+    注文 ||--|{ ラインアイテム : 含む
+    顧客 }|..|{ 届け先住所 : 使う
+```
+
+```
+erDiagram
+    顧客 ||--o{ 注文 : 行う
+    顧客 {
+        string 名前 (name)
+        string 顧客番号 (custNumber)
+        string セクター (sector)
+    }
+    注文 ||--|{ ラインアイテム : 含む
+    注文 {
+        int 注文番号 (orderNumber)
+        string 届け先住所 (deliveryAddress)
+    }
+    ラインアイテム {
+        string 商品コード (productCode)
+        int 数量 (quantity)
+        float 単価 (pricePerUnit)
+    }
+```
+
+```mermaid
+erDiagram
+    顧客 ||--o{ 注文 : 行う
+    顧客 {
+        string 名前 (name)
+        string 顧客番号 (custNumber)
+        string セクター (sector)
+    }
+    注文 ||--|{ ラインアイテム : 含む
+    注文 {
+        int 注文番号 (orderNumber)
+        string 届け先住所 (deliveryAddress)
+    }
+    ラインアイテム {
+        string 商品コード (productCode)
+        int 数量 (quantity)
+        float 単価 (pricePerUnit)
+    }
+```
+
+- [Entity Relationship Diagram | mermaid](https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram)
+
+### 要件図
+
+```
+    requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -> test_req
+```
+
+```mermaid
+    requirementDiagram
+
+    requirement test_req {
+    id: 1
+    text: the test text.
+    risk: high
+    verifymethod: test
+    }
+
+    element test_entity {
+    type: simulation
+    }
+
+    test_entity - satisfies -> test_req
+```
+
+※要素を日本語に変えると描画に失敗するため英語のまま
+
+- [Requirement Diagram | mermaid](https://mermaid-js.github.io/mermaid/#/requirementDiagram)
 
 ## Mermaid 公式
 
