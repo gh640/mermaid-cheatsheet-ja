@@ -14,7 +14,7 @@ GitHub の Markdown のコードブロックで Mermaid シンタックスが使
 - [クラス図](#クラス図)
 - [状態図](#状態図)
 - [パイチャート（円グラフ）](#パイチャート円グラフ)
-- [Git グラフ（試験的）](#git-グラフ試験的)
+- [Git グラフ](#git-グラフ)
 - [ユーザージャーニー図](#ユーザージャーニー図)
 
 ### フローチャート
@@ -163,44 +163,20 @@ pie
 "ネズミ" : 15
 ```
 
-### Git グラフ（試験的）
+### Git グラフ
 
 ```
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch newbranch
-checkout newbranch
-commit
-commit
-checkout master
-commit
-commit
-merge newbranch
+gitGraph
+   commit id: "Alpha"
+   commit id: "Beta"
+   commit id: "Gamma"
 ```
 
 ```mermaid
-gitGraph:
-options
-{
-    "nodeSpacing": 150,
-    "nodeRadius": 10
-}
-end
-commit
-branch newbranch
-checkout newbranch
-commit
-commit
-checkout master
-commit
-commit
-merge newbranch
+gitGraph
+   commit id: "Alpha"
+   commit id: "Beta"
+   commit id: "Gamma"
 ```
 
 ### ユーザージャーニー図
@@ -231,7 +207,7 @@ merge newbranch
 
 ## REAMDE にサンプルの無いもの
 
-- [ER 図（試験的）](#er-図試験的)
+- [ER 図](#er-図)
 - [要件図](#要件図)
 
 ### ER 図
