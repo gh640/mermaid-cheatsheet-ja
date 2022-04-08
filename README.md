@@ -214,57 +214,59 @@ gitGraph
 
 ```
 erDiagram
-    顧客 ||--o{ 注文 : 行う
-    注文 ||--|{ ラインアイテム : 含む
-    顧客 }|..|{ 届け先住所 : 使う
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 ```
 
 ```mermaid
 erDiagram
-    顧客 ||--o{ 注文 : 行う
-    注文 ||--|{ ラインアイテム : 含む
-    顧客 }|..|{ 届け先住所 : 使う
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
 ```
 
 ```
 erDiagram
-    顧客 ||--o{ 注文 : 行う
-    顧客 {
-        string 名前 (name)
-        string 顧客番号 (custNumber)
-        string セクター (sector)
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
     }
-    注文 ||--|{ ラインアイテム : 含む
-    注文 {
-        int 注文番号 (orderNumber)
-        string 届け先住所 (deliveryAddress)
+    ORDER ||--|{ LINE-ITEM : contains
+    ORDER {
+        int orderNumber
+        string deliveryAddress
     }
-    ラインアイテム {
-        string 商品コード (productCode)
-        int 数量 (quantity)
-        float 単価 (pricePerUnit)
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
     }
 ```
 
 ```mermaid
 erDiagram
-    顧客 ||--o{ 注文 : 行う
-    顧客 {
-        string 名前 (name)
-        string 顧客番号 (custNumber)
-        string セクター (sector)
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER {
+        string name
+        string custNumber
+        string sector
     }
-    注文 ||--|{ ラインアイテム : 含む
-    注文 {
-        int 注文番号 (orderNumber)
-        string 届け先住所 (deliveryAddress)
+    ORDER ||--|{ LINE-ITEM : contains
+    ORDER {
+        int orderNumber
+        string deliveryAddress
     }
-    ラインアイテム {
-        string 商品コード (productCode)
-        int 数量 (quantity)
-        float 単価 (pricePerUnit)
+    LINE-ITEM {
+        string productCode
+        int quantity
+        float pricePerUnit
     }
 ```
+
+※要素を日本語に変えると描画に失敗するため英語のまま
 
 - [Entity Relationship Diagram | mermaid](https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram)
 
