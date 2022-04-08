@@ -266,6 +266,44 @@ erDiagram
     }
 ```
 
+複雑なサンプル:
+
+```
+erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string allowedDriver FK "The license of the allowed driver"
+        string registrationNumber
+        string make
+        string model
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string driversLicense PK "The license #"
+        string firstName
+        string lastName
+        int age
+    }
+```
+
+```mermaid
+erDiagram
+    CAR ||--o{ NAMED-DRIVER : allows
+    CAR {
+        string allowedDriver FK "The license of the allowed driver"
+        string registrationNumber
+        string make
+        string model
+    }
+    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON {
+        string driversLicense PK "The license #"
+        string firstName
+        string lastName
+        int age
+    }
+```
+
 ※要素を日本語に変えると描画に失敗するため英語のまま
 
 - [Entity Relationship Diagram | mermaid](https://mermaid-js.github.io/mermaid/#/entityRelationshipDiagram)
