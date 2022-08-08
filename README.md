@@ -214,27 +214,27 @@ gitGraph
 
 ```
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    CUSTOMER ||--o{ ORDER : "入れる"
+    ORDER ||--|{ LINE-ITEM : "含む"
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : "使う"
 ```
 
 ```mermaid
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses
+    CUSTOMER ||--o{ ORDER : "入れる"
+    ORDER ||--|{ LINE-ITEM : "含む"
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : "使う"
 ```
 
 ```
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ ORDER : "入れる"
     CUSTOMER {
         string name
         string custNumber
         string sector
     }
-    ORDER ||--|{ LINE-ITEM : contains
+    ORDER ||--|{ LINE-ITEM : "含む"
     ORDER {
         int orderNumber
         string deliveryAddress
@@ -248,13 +248,13 @@ erDiagram
 
 ```mermaid
 erDiagram
-    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ ORDER : "入れる"
     CUSTOMER {
         string name
         string custNumber
         string sector
     }
-    ORDER ||--|{ LINE-ITEM : contains
+    ORDER ||--|{ LINE-ITEM : "含む"
     ORDER {
         int orderNumber
         string deliveryAddress
@@ -270,16 +270,16 @@ erDiagram
 
 ```
 erDiagram
-    CAR ||--o{ NAMED-DRIVER : allows
+    CAR ||--o{ NAMED-DRIVER : "許可する"
     CAR {
-        string allowedDriver FK "The license of the allowed driver"
+        string allowedDriver FK "許可されたドライバーのライセンス"
         string registrationNumber
         string make
         string model
     }
-    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON ||--o{ NAMED-DRIVER : "である"
     PERSON {
-        string driversLicense PK "The license #"
+        string driversLicense PK "ライセンスナンバー"
         string firstName
         string lastName
         int age
@@ -288,16 +288,16 @@ erDiagram
 
 ```mermaid
 erDiagram
-    CAR ||--o{ NAMED-DRIVER : allows
+    CAR ||--o{ NAMED-DRIVER : "許可する"
     CAR {
-        string allowedDriver FK "The license of the allowed driver"
+        string allowedDriver FK "許可されたドライバーのライセンス"
         string registrationNumber
         string make
         string model
     }
-    PERSON ||--o{ NAMED-DRIVER : is
+    PERSON ||--o{ NAMED-DRIVER : "である"
     PERSON {
-        string driversLicense PK "The license #"
+        string driversLicense PK "ライセンスナンバー"
         string firstName
         string lastName
         int age
@@ -313,35 +313,35 @@ erDiagram
 ```
     requirementDiagram
 
-    requirement test_req {
+    requirement "テスト要件" {
     id: 1
-    text: the test text.
+    text: テストテキスト。
     risk: high
     verifymethod: test
     }
 
-    element test_entity {
+    element "テストエンティティ" {
     type: simulation
     }
 
-    test_entity - satisfies -> test_req
+    "テストエンティティ" - satisfies -> "テスト要件"
 ```
 
 ```mermaid
     requirementDiagram
 
-    requirement test_req {
+    requirement "テスト要件" {
     id: 1
-    text: the test text.
+    text: テストテキスト。
     risk: high
     verifymethod: test
     }
 
-    element test_entity {
+    element "テストエンティティ" {
     type: simulation
     }
 
-    test_entity - satisfies -> test_req
+    "テストエンティティ" - satisfies -> "テスト要件"
 ```
 
 ※要素を日本語に変えると描画に失敗するため英語のまま
