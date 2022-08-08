@@ -145,6 +145,8 @@ classDiagram
     }
 ```
 
+- [Class diagram | mermaid](https://mermaid-js.github.io/mermaid/#/classDiagram)
+
 ### 状態図
 
 ```
@@ -167,6 +169,8 @@ stateDiagram-v2
     衝突 --> [*]
 ```
 
+- [State diagram | mermaid](https://mermaid-js.github.io/mermaid/#/stateDiagram)
+
 ### パイチャート（円グラフ）
 
 ```
@@ -182,6 +186,8 @@ pie title ボランティアに迎えられたペット
     "猫" : 85
     "ねずみ" : 15
 ```
+
+- [Pie chart | mermaid](https://mermaid-js.github.io/mermaid/#/pie)
 
 ### Git グラフ
 
@@ -211,6 +217,8 @@ gitGraph
    commit
 ```
 
+- [Gitgraph diagram | mermaid](https://mermaid-js.github.io/mermaid/#/gitgraph)
+
 ### ユーザージャーニー図
 
 ```
@@ -236,6 +244,8 @@ journey
       下の階におりる: 5: 私
       座る: 3: 私
 ```
+
+- [User journey | mermaid](https://mermaid-js.github.io/mermaid/#/user-journey)
 
 ## REAMDE にサンプルの無いもの
 
